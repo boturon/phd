@@ -1,0 +1,6 @@
+horiz: 0
+type: lstm7
+split: 450
+max_split: 660
+target: UNEMPLOYMENT_TARGET
+epochs: 3000

@@ -1,0 +1,113 @@
+
+
+---
+name: "month"
+originating_file: './data/processed_data/monthly_dates_mo_yr.csv'
+dtype: 'int64'
+start_col: 0
+end_col: 1
+slice_start: -36
+slice_length: 36
+slice_step: 1
+tensor_shape: [1,36,1]
+
+---
+name: "yr"
+originating_file: './data/processed_data/monthly_dates_mo_yr.csv'
+dtype: 'int64'
+start_col: 1
+end_col: 2
+slice_start: -36
+slice_length: 36
+slice_step: 1
+tensor_shape: [1,36,1]
+
+
+---
+name: "time"
+originating_file: './data/processed_data/monthly_dates_epochs.csv'
+dtype: int64
+start_col: 0
+end_col: 1
+slice_start: -36 # move to end of quarter
+slice_length: 36
+slice_step: 1
+tensor_shape: [1,36,1]
+
+
+---
+name: "GDPtime"
+originating_file: './data/processed_data/monthly_dates_epochs.csv'
+dtype: int64
+start_col: 0
+end_col: 1
+slice_start: 9
+slice_length: 1
+slice_step: 1
+partition_rescale: 1
+tensor_shape: [1]
+
+
+
+
+
+---
+name: UNEMPLOYMENT_INPUT
+originating_file: './data/processed_data/unemployment.csv'
+dtype: 'float32'
+start_col: 0
+end_col: 1
+slice_start: -36
+slice_length: 36
+slice_step: 1
+partition_rescale: 1
+tensor_shape: [1,36,1]
+
+---
+name: UNEMPLOYMENT_Q_INPUT
+originating_file: './data/processed_data/unemployment_q.csv'
+dtype: 'float32'
+start_col: 0
+end_col: 1
+slice_start: -36
+slice_length: 36
+slice_step: 1
+partition_rescale: 1
+tensor_shape: [1,36,1]
+
+
+---
+name: UNEMPLOYMENT_FD
+originating_file: './data/processed_data/unemployment_fd.csv'
+dtype: 'float32'
+start_col: 0
+end_col: 1
+slice_start: -36
+slice_length: 36
+slice_step: 1
+partition_rescale: 1
+tensor_shape: [1,36,1]
+
+---
+name: UNEMPLOYMENT_TARGET
+originating_file: './data/processed_data/unemployment_q.csv'
+dtype: 'float32'
+start_col: 0
+end_col: 1
+slice_start: 9
+slice_length: 1
+slice_step: 1
+partition_rescale: 1
+tensor_shape: [1]
+
+---
+name: UNEMPLOYMENT_SD
+originating_file: './data/processed_data/unemployment_sd.csv'
+dtype: 'float32'
+start_col: 0
+end_col: 1
+slice_start: -36
+slice_length: 36
+slice_step: 1
+partition_rescale: 1
+tensor_shape: [1,36,1]
